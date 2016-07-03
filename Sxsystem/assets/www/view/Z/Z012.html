@@ -1,0 +1,252 @@
+
+        <div class="navbar">
+		  <div class="navbar-inner">
+			<div class="left sliding"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>
+			<div class="center">
+			  <div class="buttons-row">
+				<a href="#" class="tab tab-link button02 active button" id="tanHref1">党员信息</a>
+				<a href="#" class="tab tab-link button button02" id="tanHref2">信息维护</a>
+			  </div>
+			</div>
+			<div class="right sliding"></div>
+		  </div>
+		</div>
+		<!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+ <div class="pages">
+	  <div class="page  no-toolbar"  data-page="Z012">
+		<!-- Tabs, tabs容器, page-content为tabs -->
+		<div class="page-content tabs">
+		  <!-- Tab 1，组织信息 -->
+		  <div id="tab1" class="tab active">
+			 <div class="content-block content-block-z012">
+				  <p><a href="#" class="button">党员总数：{{dangyuanCount}}人</a></p>
+			  </div>
+			  <!--按性别开始-->
+			  <div class="list-block">
+				  <ul>
+					  <li>
+					    <div class="item-content">
+              <div class="item-media"><i class="icon icon-form-r007"></i></div>
+              <div class="item-inner"> 
+                <div class="item-title item-title02 label">按性别</div>             
+              </div>
+            </div></li>			
+				  </ul>
+			  </div>			  			
+			<div class="content-block content-block-z012" id="container01" style="height: 200px">
+				
+			  </div>
+			  <!--按性别结束-->
+			  <!--按民族开始-->
+			  <div class="list-block">
+				  <ul>
+					  <li>
+					    <div class="item-content">
+              <div class="item-media"><i class="icon icon-form-z01"></i></div>
+              <div class="item-inner"> 
+                <div class="item-title item-title02 labe l">按民族</div>             
+              </div>
+            </div></li>			
+				  </ul>
+			  </div>			  			
+			<div class="content-block content-block-z012"  id="container02" style="height: 200px">
+			  </div>
+			  <!--按民族结束-->
+			  <!--按学历开始-->
+			  <div class="list-block">
+				  <ul>
+					  <li>
+					    <div class="item-content">
+              <div class="item-media"><i class="icon icon-form-z02"></i></div>
+              <div class="item-inner"> 
+                <div class="item-title item-title02 labe l">按学历</div>             
+              </div>
+            </div></li>			
+				  </ul>
+			  </div>			  			
+			<div class="content-block content-block-z012"  id="container03" style="height: 200px">
+			  </div><span style="color: red"></span>
+			  <!--按学历结束-->
+			  <!--按年龄开始-->
+			  <div class="list-block">
+				  <ul>
+					  <li>
+					    <div class="item-content">
+              <div class="item-media"><i class="icon icon-form-z03"></i></div>
+              <div class="item-inner"> 
+                <div class="item-title item-title02 labe l">按年龄</div>             
+              </div>
+            </div></li>			
+				  </ul>
+			  </div>			  			
+			<div class="content-block content-block-z012"  id="container04" style="height: 200px">
+			  </div>
+			  <!--按年龄结束-->
+		  </div>
+		  <!-- Tab 2 信息维护-->
+		  <div id="tab2" class="tab">
+		   <form action="" id="Z012Form">
+		  
+			 <div class="list-block">
+        <ul>
+          <li>
+            <div class="item-content">
+              <div class="item-media"><i class="icon icon-form-number"></i></div>
+              <div class="item-inner"> 
+                <div class="item-title item-title02 label">党员编号</div>
+                <div class="item-input">
+                  <input type="text" readonly="readonly" value="{{A0100}}">
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="item-content">
+              <div class="item-media"><i class="icon icon-form-s001"></i></div>
+              <div class="item-inner"> 
+                <div class="item-title item-title02 label">姓名</div>
+                <div class="item-input">
+                  <input type="text" placeholder="姓名" class="" value="{{A0101}}">
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="item-content">
+              <div class="item-media"><i class="icon icon-form-r007"></i></div>
+              <div class="item-inner"> 
+                <div class="item-title item-title02 label">性别</div>
+                <div class="item-input">
+                  <input type="text" placeholder="性别" readonly="readonly" value="{{A0104}}">
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="item-content">
+              <div class="item-media"><i class="icon icon-form-r008"></i></div>
+              <div class="item-inner"> 
+                <div class="item-title item-title02 label">身份证号</div>
+                <div class="item-input">
+                  <input type="text" placeholder="身份证号" readonly="readonly" value="{{A0184}}">
+                </div>
+              </div>
+            </div>
+          </li>
+         
+		  </ul>
+		  </div>
+		  <div class="list-block">
+		  <ul>
+          <li>
+            <div class="item-content">
+              <div class="item-media"><i class="icon icon-form-tel"></i></div>
+              <div class="item-inner"> 
+                <div class="item-title item-title02 label">手机号</div>
+                <div class="item-input">
+                  <input type="text" placeholder="手机号" value="{{AT001}}"   name="AT001" maxlength="12">
+                </div>
+              </div>
+            </div>
+          </li>
+            <li>
+            <div class="item-content">
+              <div class="item-media"></div>
+              <div class="item-inner"> 
+                <div class="item-input">
+                  <input type="tel" style="color: red" value="*该手机号为微信学习平台注册手机号" readonly="readonly">
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="item-content">
+              <div class="item-media"><i class="icon icon-form-comment"></i></div>
+              <div class="item-inner"> 
+                <div class="item-title item-title02 label">家庭住址</div>
+                <div class="item-input">
+                  <input type="text" placeholder="家庭住址" value="{{A01A1}}" name="A01A1" maxlength="200">
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="item-content">
+              <div class="item-media"><i class="icon icon-form-calendar"></i></div>
+              <div class="item-inner"> 
+                <div class="item-title item-title02 label">工作单位</div>
+                <div class="item-input">
+                  <input type="text" placeholder="Birth day" value="工作单位" value="{{A0135}}" name="A0135" maxlength="200">
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="item-content">
+              <div class="item-media"><i class="icon icon-form-calendar"></i></div>
+              <div class="item-inner"> 
+                <div class="item-title item-title02 label">工作时间</div>
+                <div class="item-input">
+                  <input type="date" placeholder="工作时间" value="{{A0115}}" name="A0115">
+                </div>
+              </div>
+            </div>
+          </li>
+		  </ul>
+		  </div>
+		  <div class="list-block">
+		  <ul>
+          <li>
+            <div class="item-content">
+              <div class="item-media"><i class="icon icon-form-attribute"></i></div>
+              <div class="item-inner"> 
+                <div class="item-title item-title02 label">新阶层</div>
+                <div class="item-input">
+                  <input type="text" placeholder="新阶层" value="{{A0112}}" name="A0112" maxlength="20">
+                </div>
+              </div>
+            </div>
+          </li>
+		  <li class="align-top">
+            <div class="item-content">
+              <div class="item-media"><i class="icon icon-form-r009"></i></div>
+              <div class="item-inner"> 
+                <div class="item-title item-title02 label">职务</div>
+                <div class="item-input">
+                  <input type="text" placeholder="职务" value="{{A0215}}" name="A0215" maxlength="20">
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="align-top">
+            <div class="item-content">
+              <div class="item-media"><i class="icon icon-form-code"></i></div>
+              <div class="item-inner"> 
+                <div class="item-title label">技术职务</div>
+                <div class="item-input">
+                  <input type="text" placeholder="技术职务" value="{{A0302}}" name="A0302" maxlength="20">
+                </div>
+              </div>
+            </div>
+          </li>
+		   <li class="align-top">
+            <div class="item-content">
+              <div class="item-media"><i class="icon icon-form-text"></i></div>
+              <div class="item-inner"> 
+                <div class="item-title item-title02 label">职务级别</div>
+                <div class="item-input">
+                  <input type="text" placeholder="职务级别" value="{{A0221}}" name="A0221" maxlength="20">
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      </form>
+	  <div class="content-block">
+				<a href="#" class="button button-round active" onclick="saveZ012()">保存</a>
+	  </div>	
+		  </div>
+		</div>
+	  </div>
+	 </div>

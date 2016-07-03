@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <title>My App</title>
+       
+	<script src="cordova.js"></script>
+	<script src="lib/jquery/jquery-1.11.0.min.js"></script>
+	<script src="lib/check/jquery.validate.js"></script>
+	<script src="lib/check/messages_cn.js"></script>
+		<script src="lib/hicharts/highcharts.js"></script>
+		<script src="lib/hicharts/highcharts-3d.js"></script>
+	<!-- common -->
+	<script src="js/common/constant.js"></script>
+	<script src="js/common/commonfunc.js"></script>
+	<script src="js/common/commonutil.js"></script>
+	<script src="js/common/msgutil.js"></script>
+	<script src="js/common/httputil.js"></script>
+	<script src="js/common/jltools.js"></script>
+    <script src="js/index.js"></script>
+    
+    <link rel="stylesheet" href="dist/css/framework7.ios.min.css">
+    <link rel="stylesheet" href="dist/css/framework7.ios.colors.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="dist/css/my-app.css">
+	<link rel="stylesheet" href="dist/css/kitchen-sink.css">
+	<link rel="stylesheet" href="css/app.css">
+	<style type="text/css">
+	.navbar-fixed .page-content, .navbar-through .page-content{padding-top:65px}
+	/*头部背景*/
+	.navbar{height:65px}
+	</style>
+  </head>
+  <body class="theme-red">
+    <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar-overlay"></div>
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+ 
+    <!-- Views-->
+    <div class="views">
+      <!-- Your main view, should have "view-main" class-->
+      <div class="view view-main">
+       <!-- Top Navbar-->
+        <div class="navbar theme-red">
+          <div class="navbar-inner">
+            <!-- We have home navbar without left link-->
+            <div class="center sliding"></div>
+          </div>
+        </div>
+        <div class="pages navbar-through toolbar-through">
+          <!-- Page, data-page contains page name-->
+          <div data-page="S000" class="page">
+            
+          </div>
+        </div>
+
+	      <div class="toolbar tabbar tabbar-labels">
+	        <div class="toolbar-inner">
+	        <a href="#" onclick="toToolBar(1,this)" id="indexTb" class="tab-link  active"> <i class="icon tabbar-demo-icon-1"></i><span class="tabbar-label">首页</span></a>
+	        <a href="#" onclick="toToolBar(2,this)" class="tab-link" id="yilanid"> <i class="icon tabbar-demo-icon-3"></i><span class="tabbar-label">通知</span></a>
+	        <a href="#" onclick="toToolBar(3,this)" class="tab-link"> <i class="icon tabbar-demo-icon-4"></i><span class="tabbar-label">个人中心</span></a></div>
+	      </div>
+	    </div>
+      </div>
+    </div>
+    <!-- login -->
+    <div class="login-screen">
+    
+    <div class="page">
+        <div class="page-content login-screen-content login-screen-content01">
+		<div class="login-width"><!--liu add div:login-width-->
+          <div class="login-screen-title"><img src="img/01.png"></div></div>
+          <form id="indexForm">
+            <div class="list-block list-content block-reg02"><!--liu add class:list-content-->
+              <ul>
+                <li class="item-content content-login">
+                  <div class="item-inner inner-login">
+                    <div class="item-title label"><iframe src="img/user.svg" width="14" height="17"> </iframe></div>
+                    <div class="item-input">
+                      <input type="text" name="j_username" id="j_username" placeholder="" value="" maxlength="20">
+                    </div>
+                  </div>
+                </li>
+                <li class="item-content content-login">
+                  <div class="item-inner inner-login inner-login02">
+                    <div class="item-title label"><iframe src="img/password.svg"width="14"  height="17"></iframe></div>
+                    <div class="item-input">
+                      <input type="password" name="j_password" id="j_password" placeholder="" value="" maxlength="6">
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+
+ 		<div class="list-block list-content block-reg02"><!--liu add class:list-content-->
+             <div class="row">
+			
+			   <div class="col-50">
+			   	<label class="label-radio item-content">
+			        <!-- Checked by default -->
+						<input type="radio" name="roleType" value="2">
+			        <div class="item-inner">
+			          <div class="item-title">党组织</div>
+			        </div>
+			      </label>
+			   </div>
+			   <div class="col-50">
+			   	<label class="label-radio item-content">
+						<input type="radio" name="roleType"value="1"checked="checked">
+			        <div class="item-inner">
+			          <div class="item-title">党员</div>
+			        </div>
+			      </label>
+			   </div>    
+			</div> 	
+             
+            </div>
+            
+
+			
+			<div class="list-block block-reg" id="rember"> <!--liu add id:rember-->
+			<label class="label-checkbox item-content item-left" >
+              <input type="checkbox" name="autologinflg" id="autologinflg" value="1" checked="checked"/>
+              <div class="item-media"><i class="icon icon-form-checkbox"></i></div>
+              <div class="item-inner inner-none inner-login03"><!--liu add class:inner-none-->
+                <div class="item-title title-login">记住密码</div>
+				
+              </div>
+            </label>
+			<div class="item-title title-login02" onclick="CommonFunc.toHtml('view/S/S011.html')">忘记密码？</div></div>
+			
+            <div class="list-block block-reg">
+			<div class="col-50"><a href="#" class="button button-round button-fill color-green" id="btnlogin">安全登录</a></div>
+            <div class="list-block-label"> <p>版权所有：党建</p> <p>技术支持：绍兴党建</p>
+             </div>
+            </div>
+          </form>
+        </div>
+    
+  </div>
+  
+	<!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="dist/js/framework7.min.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="dist/js/my-app.js"></script>
+    <script type="text/javascript" src="js/jlview.js"></script>
+    <script src="js/z.js"></script>
+    <script src="js/f.js"></script>
+    <script src="js/k.js"></script>
+    <script src="js/q.js"></script>
+    <script src="js/h.js"></script>
+    <script src="js/s.js"></script>
+    <script src="js/r.js"></script>
+    <script src="js/bl.js"></script>
+    <script id="r03102" type="text/template7">
+    	 {{#each payMoneyList}}
+							  <li class="item-content item-content-r012">
+						  <div class="list-block list-block02 media-list">
+							<ul  >
+							  <li onclick="R033({{payId}})"><a href="#" class="item-link item-content r012-content">
+								  <div class="item-media item-media-r021"><img src="img/r021-head02.svg"/></div>
+								  <div class="item-inner item-inner02">
+									<div class="item-title-row">
+									   <div class="item-title item-title-r032">单号:{{orderNo}}</div>
+									</div>
+								  </div></a></li>
+								  	<div class="item-text">
+										 <div class="row no-gutter">
+											<div class="col-50">缴费年份:{{year}}</div>
+											<div class="col-50 col-money">金额:{{moneyCount}}¥</div>
+										  </div>
+									</div>
+							</ul>
+						  </div>
+					  </li>	
+					   {{/each}}
+</script>
+
+ 
+
+
+    <script id="k0001template" type="text/template7">
+    	{{#each this.noticeList}}
+							  <li><a href="#" onclick="toNoticeDetail({{id}},{{typeId}})" class="item-link item-content r012-content">
+								  <div class="item-media item-media-k0">
+								  {{#js_compare "this.typeId === 1"}}
+										<img src="img/message3.svg" width="70" />
+									{{/js_compare}}  
+									{{#js_compare "this.typeId === 2"}}
+									<img src="img/message2.svg" width="70" />
+									{{/js_compare}}  
+									{{#js_compare "this.typeId === 3"}}
+									<img src="img/message.svg" width="70" />
+									{{/js_compare}}  
+									{{#js_compare "this.typeId === 4"}}
+									<img src="img/message1.svg" width="70" />
+									{{/js_compare}} 
+									{{#js_compare "this.typeId === 5"}}
+									<img src="img/message4.svg" width="70" />
+									{{/js_compare}}  
+									{{#js_compare "this.typeId === 6"}}
+									<img src="img/message6.svg" width="70" />
+									{{/js_compare}}  
+									{{#js_compare "this.typeId === 7"}}
+									<img src="img/message5.svg" width="70" />
+									{{/js_compare}} 
+								  
+								  </div>
+								  <div class="item-inner">
+									<div class="item-title-row">
+									  <div class="item-title">{{title}}</div>
+									  <div class="item-after">{{typeName}}</div>
+									</div>
+									<div class="item-text item-text02">{{date}}
+									</div>
+								  </div></a></li>	
+								  {{/each}}	
+</script>
+
+	<script id="r04101template" type="text/template7">
+	{{#each this}}
+	  <li class="item-content item-content-r012 item-content-r041">
+		  <div class="list-block list-block02 media-list">
+			<ul>
+			  <li><a href="#" class="item-link item-content r012-content" onclick="toR042('{{prcId}}')">
+				  <div class="item-media"><img src="{{imgUrl}}"/></div>
+				  <div class="item-inner item-inner02">
+					<div class="item-title-row">
+					  <div class="item-title">{{a0101}} <label style="margin-left:10px;">{{a0104}}</label></div>
+					  <div class="item-after">{{state}}</div>
+					</div>
+					<div class="item-title-row item-title-rownone">
+					  <div class="item-title">{{pmType}}</div>
+					</div>
+					<div class="item-title-row item-title-rownone item-title-row02">
+					  <div class="item-subtitle item-subtitle-r041">身份证号：{{a0184}}</div>
+					</div>
+					<div class="item-title-row item-title-rownone item-title-row02">
+					  <div class="item-subtitle item-subtitle-r041">所属单位：{{fromOrgName}}</div>
+					</div>
+				  </div></a></li>
+				  	<div class="item-text item-text-r041">
+					<div class="ks-grid ks-grid-r041">
+					<div class="row no-gutter">
+					  <div class="col-25">
+					    <div class="r041-top r041-top-title">转移方式</div>
+						<div class="r041-bottom">{{changeType}}</div>
+					  </div>
+					  <div class="col-50"><div class="r041-top r041-top-title">接收单位</div>
+						<div class="r041-bottom">{{toOrgName}}</div></div>
+					  <div class="col-25"><div class="r041-top r041-top-title">转移时间</div>
+						<div class="r041-bottom">{{changeDate}}</div></div>
+					</div>
+					</div>
+					</div>
+			</ul>
+		  </div>
+	  </li>
+	  {{/each}}
+ 	</script>
+	<script id="r04102template" type="text/template7">
+
+		{{#each this}}
+		  <li><a href="#" class="item-link item-content r012-content" onclick="toR052('{{letterId}}')">
+			  <div class="item-media item-media-k0"><img src="img/message.svg"/></div>
+			  <div class="item-inner">
+				<div class="item-title-row">
+				  <div class="item-title">{{letterTitle}}</div>
+				</div>
+				<div class="item-text item-text02">{{createDate}}
+				</div>
+			  </div></a></li>
+		{{/each}}
+	</script>
+		<script id="r001template" type="text/template7">
+		{{#each partyList}}
+							  <li><a href="#"  onclick="toR002({{partyID}})" class="item-link item-content r012-content">
+								  <div class="item-media item-media-k0"><img src="img/18.png"/></div>
+								  <div class="item-inner item-inner-r001">
+									<div class="item-title-row">
+									  <div class="item-title">{{position}}</div>
+									</div>
+									<div class="item-text item-text02">{{username}}
+									</div>
+								  </div></a></li>
+								 {{/each}} 
+	</script>
+						<script id="r012template" type="text/template7">
+			{{#each r012List}}
+					  <li class="item-content item-content-r012">
+						  <div class="list-block list-block02 media-list">
+							<ul>
+							  <li><a href="#" class="item-link item-content r012-content">
+								  <div class="item-media"></div>
+								  <div class="item-inner item-inner02">
+									<div class="item-title-row item-title-rownone item-title-row02">
+									  <div class="item-title">{{organization}}</div>
+									  <div class="item-after">{{id}}</div>
+									</div>
+									<div class="item-title-row item-title-rownone item-title-row02">
+									  <div class="item-subtitle">数量：{{count}}</div>
+									  <div class="item-after item-after-time">{{year}}</div>
+									</div>
+								  </div></a></li>
+									<div class="accordion-item">
+								        <div class="accordion-item-toggle item-text">备注(点击查看)</div>
+								        <div class="accordion-item-content" >{{addition}}</div>
+								    </div>
+							</ul>
+						  </div>
+					  </li>
+				 {{/each}}
+	</script>
+<script id="r013template" type="text/template7">
+			{{#each r013List}}
+					  <li class="item-content item-content-r012">
+						  <div class="list-block list-block02 media-list">
+							<ul>
+							  <li><a href="#" class="item-link item-content r012-content">
+								  <div class="item-media"></div>
+								  <div class="item-inner item-inner02">
+									<div class="item-title-row item-title-rownone item-title-row02">
+									  <div class="item-title"> {{organization}}</div>
+									  <div class="item-after item-after-time">{{orgId}}</div>
+									</div>
+									<div class="item-title-row item-title-rownone item-title-row02">
+										<div class="row no-gutter">
+											<div class="col-50">指标 年度:{{yearCount}}</div>
+											<div class="col-50">提报:{{submitCount}}</div>
+										 </div>
+									</div>
+									<div class="item-title-row item-title-rownone item-title-row02">	
+									  <div class="row no-gutter">
+											<div class="col-50">审核:{{checkCount}}</div>
+											<div class="col-50">完成比例:{{rate}}%</div>
+											
+										 </div>									  
+									</div>
+								  </div></a></li>
+											<div class="accordion-item">
+										<div class="accordion-item-toggle item-text">备注(点击查看)</div>
+								        <div class="accordion-item-content" >{{info}}</div>
+							</ul>
+						  </div>
+					  </li>
+					  {{/each}} 
+	</script>
+	<script id="r04103template" type="text/template7">
+		{{#each this}}
+		<li><a href="#" class="item-link item-content r012-content" onclick="toR062('{{carnetId}}')">
+		  <div class="item-media item-media-k0"><img src="img/message.svg"/></div>
+		  <div class="item-inner">
+			<div class="item-title-row">
+			  <div class="item-title">{{carnetTitle}}</div>
+			</div>
+			<div class="item-text item-text02">{{createDate}}
+			</div>
+		  </div></a></li>
+		{{/each}}
+	</script>
+	<script id="f002template" type="text/template7">
+		{{#each this}}
+		  <li><a href="#" class="item-link item-content r012-content">
+			  <div class="item-inner item-inner02 item-inner-f002">
+				<div class="item-title-row item-title-rownone item-title-row02 item-title-rowf002">
+				  <div class="item-title"><img src="img/f01.svg">来源：{{pointSource}}</div>
+				</div>
+				<div class="item-text item-text-r041">
+				<div class="ks-grid-r041 ks-grid-f002">
+				<div class="row no-gutter">
+				  <div class="col-50 col-line">
+				    <div class="r041-top r041-top-title"><img src="img/f02.svg">获得积分</div>
+					<div class="r041-bottom">{{pointScore}}分</div>
+				  </div>
+				  <div class="col-50"><div class="r041-top r041-top-title f002-top-title"><img src="img/f03.svg">当前累计积分</div>
+					<div class="r041-bottom">{{pointCount}}分</div></div>
+				</div>
+				</div>
+				</div>
+			  </div>
+			  </a></li>
+		{{/each}}
+	</script>
+	<script id="f003template" type="text/template7">
+		{{#each this}}
+		  <li class="item-content item-content-r012">
+			  <div class="list-block list-block02 media-list">
+				<ul>
+				  <li><a href="#" class="item-link item-content r012-content">
+					  <div class="item-inner item-inner02 item-inner-f002">
+					  <div class="item-title-row item-title-rownone item-title-row02 item-title-rowf002">
+						  <div class="item-title"><img src="img/f01.svg">{{orgName}}</div>
+						</div>
+						<div class="item-text item-text-r041">
+						<div class="ks-grid-r041 ks-grid-f002">
+						<div class="row no-gutter">
+						  <div class="col-50 col-line">
+						    <div class="r041-top r041-top-title"><img src="img/f02.svg">第{{rank}}名</div>
+						  </div>
+						  <div class="col-50"><div class="r041-top r041-top-title f002-top-title"><img src="img/f03.svg">累计积分：{{countPoint}}</div>
+							</div>
+						</div>
+						</div>
+						</div>
+					  </div>
+					  </a></li>
+				</ul>
+			  </div>
+		  </li>
+		  {{/each}}
+	</script>
+	<script id="q02201template" type="text/template7">
+		{{#each this}}
+		  <li><a href="#" class="item-link item-content r012-content">
+			  <div class="item-media"><img src="{{donateImageUrl}}"/></div>
+			  <div class="item-inner">
+				<div class="item-title-row">
+				  <div class="item-title">{{donateName}}</div>
+				  <div class="item-after">{{donateState}}</div>
+				</div>
+				<div class="item-text item-text02">捐赠时间:{{donateDate}}
+				</div>
+			  </div></a>
+			</li>
+		{{/each}}
+	</script>
+		<script id="r021template" type="text/template7">
+					{{#each g01List}}
+					  <li class="item-content item-content-r012">
+						  <div class="list-block list-block02 media-list">
+							<ul >
+							
+							  <li><a href="#" onclick="toR022({{id}})" class="item-link item-content r012-content">
+								  <div class="item-media item-media-r021"><img src="{{headPhoto}}"/></div>
+								  <div class="item-inner item-inner02">
+									<div class="item-title-row">
+									  <div class="item-title">{{organization}}</div>
+									  <div class="item-after">{{id}}</div>
+									</div>
+								  </div></a></li>
+								  	<div class="item-text">
+										 <div class="row no-gutter">
+											<div class="col-40">开户银行：{{G0103}}</div>
+											<div class="col-60 col-right">{{G0101}}</div>
+										  </div>
+									</div>
+									
+							</ul>
+						  </div>
+						  
+					  </li>
+					  {{/each}}
+	</script>
+	<script id="k004template" type="text/template7">
+			{{#each this}}		  
+				<div class="list-group">						 
+			<ul> 
+				<li class="list-group-title">{{firstChar}}</li>
+					<ul>
+					{{#each partyList}}
+					<li>
+					<label class="label-checkbox item-content">
+					<div class="item-inner">
+					<div class="item-title">{{a0101}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{a0184}}</div>								
+					<input type="checkbox" name="pmIds" value="{{a0100}}"/>
+					<div class="item-media"><i class="icon icon-form-checkbox"></i></div>
+					</div>
+					</label>
+					</li>
+					{{/each}}	
+				</ul>
+				</ul>
+			</div>
+		 {{/each}}
+	</script>
+  </body>
+</html>

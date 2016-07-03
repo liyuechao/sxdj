@@ -1,0 +1,102 @@
+    <div class="navbar">
+		  <div class="navbar-inner">
+			<div class="left sliding"><a href="#"   class="back link"><i class="icon icon-back"></i></a></div>
+			<div class="center sliding">换届详情</div>
+		  </div>
+		</div>
+		<!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+ <div class="pages">
+	  <div class="page no-toolbar"  data-page="K001">
+		<div class="page-content">
+		 <div class="content-block content-block-k005 ">
+						<img src="img/message3.svg"/>{{title}}
+				     </div>
+		
+			 <div class="list-block">
+        <ul>
+          <li>
+            <div class="item-content">
+              <div class="item-media"><i class="icon icon-form-k004"></i></div>
+              <div class="item-inner"> 
+                <div class="item-title item-k001 label">开始日期</div>
+                <div class="item-input">
+                  <input type="text" value="{{startDate}}" readonly="readonly">
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="item-content">
+              <div class="item-media"><i class="icon icon-form-k005"></i></div>
+              <div class="item-inner"> 
+                <div class="item-title item-title02 label">结束日期</div>
+                <div class="item-input">
+                  <input type="text" value="{{endDate}}" class="" readonly="readonly">
+                </div>
+              </div>
+            </div>
+          </li>
+         <li class="align-top">
+            <div class="item-content">
+              <div class="item-media"><i class="icon icon-form-k007"></i></div>
+              <div class="item-inner"> 
+                <div class="item-title item-title02 label">通知内容</div>
+                <div class="item-input">
+                  <textarea readonly="readonly">{{content}}</textarea>
+                </div>
+              </div>
+            </div>
+          </li>
+		
+              <li>
+            <div class="item-content">
+              <div class="item-media"><i class="icon icon-form-k009"></i></div>
+              <div class="item-inner"> 
+                <div class="item-title item-title02 label">下发机构</div>
+                <div class="item-input">
+                  <input type="text"  value="{{organization}}" readonly="readonly">
+                </div>
+              </div>
+            </div>
+          </li>
+           <li>
+            <div class="item-content">
+              <div class="item-media"><i class="icon icon-form-k005"></i></div>
+              <div class="item-inner"> 
+                <div class="item-title item-title02 label">下发日期</div>
+                <div class="item-input">
+                  <input type="text" readonly="readonly" value="{{time}}">
+                </div>
+              </div>
+            </div>
+          </li>
+	  <li >
+            <div class="item-content" >
+              <div class="item-inner"> 
+               
+               <div class="item-inner-k001" id="images" >
+               {{#each images}}
+					 <a href="#" class="pb-popup"><img  class="upload" src="{{imgUrl}}"/></a>	
+					{{/each}}
+					 <a href="" id="seeMorePhotos" ><img  class="upload" src="img/more001.svg" style="height: 40px" /></a>	
+				 </div>
+              </div>
+            </div>
+          </li>
+           <li class="align-top">
+            <div class="item-content">
+              <div class="item-media"><i class="icon icon-form-k008"></i></div>
+              <div class="item-inner"> 
+                <div class="item-title item-title02 label">附件<br/>(点击下载)</div>
+                <div class="item-inner-k001">
+					{{#each files}}
+					{{@index+1}}.<a href="#" onclick="HttpUtil.downloadURLFile('{{fUrl}}')" class=" Upload">{{fName}}</a><br/>
+					{{/each}}
+				 </div>
+              </div>
+            </div>
+          </li>
+		</div>
+	  </div>
+	</div>
+	  </div>

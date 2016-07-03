@@ -1,0 +1,63 @@
+﻿
+        <div class="navbar">
+		  <div class="navbar-inner">
+			<div class="left sliding"><a href="#" class="back link"><i class="icon icon-back"></i></a></div>
+			<div class="center sliding">选择党员</div>	
+			<div class="right sliding"><a href="#" class="button" onclick="submitK004Form()">保存</a></div>				
+		  </div>
+		</div>
+	<div class="pages">
+	  <div class="page no-toolbar" data-page="K004">
+				<div class="page-content pull-to-refresh-content" data-ptr-distance="55" id="k004page">
+				<div class="pull-to-refresh-layer">
+			      <div class="preloader"></div>
+			      <div class="pull-to-refresh-arrow"></div>
+		    	</div>
+			  <div data-page="searchbar">
+				<form  class="searchbar searchbar02 searchbar-init" id="k004SearchForm">
+				  <div class="searchbar-input">
+					<input type="search" placeholder="党员姓名/身份证号" name="searchField" id="k004SearchField" maxlength="20"/><a href="#" class="searchbar-clear"></a>
+				  </div><a href="#" class="searchbar-cancel">取消</a>
+				</form>
+				<div class="searchbar-overlay"></div>
+				 </div>	  			
+				  <div class="list-block searchbar-not-found">
+					<ul>
+					  <li class="item-content">
+						<div class="item-inner">
+						  <div class="item-title">找不到要查询的内容</div>
+						</div>
+					  </li>
+					</ul>
+				  </div>
+				  <form id="k004Form">
+				  <input type="hidden" id="k004NoticeId" value="{{noticeId}}" name="noticeId"/>
+				  <div class="list-block list-block02 search-here searchbar-found" id="k004Content">
+				{{#each this}}		  
+	 				<div class="list-group">						 
+					<ul> 
+						<li class="list-group-title">{{firstChar}}</li>
+							<ul>
+							{{#each partyList}}
+							<li>
+							<label class="label-checkbox item-content">
+							<div class="item-inner">
+							<div class="item-title">{{a0101}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{a0184}}</div>								
+							<input type="checkbox" name="pmIds" value="{{a0100}}"/>
+							<div class="item-media"><i class="icon icon-form-checkbox"></i></div>
+							</div>
+							</label>
+							</li>
+							{{/each}}	
+						</ul>
+						</ul>
+					</div>
+				 {{/each}}						  
+						</div></form>
+				  </div>
+				  
+				</div>
+		 
+	  </div>
+
+

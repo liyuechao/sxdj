@@ -1,0 +1,191 @@
+    <div class="navbar">
+		  <div class="navbar-inner">
+			<div class="left sliding"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>
+			<div class="center sliding">智慧红娘信息申报</div>
+			<div class="right sliding"><a href="#" onclick="CommonFunc.toHtml('view/Q/Q012.html')" class="button">帮助</a></div>	
+		  </div>
+		</div>
+		<!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+ <div class="pages">
+	  <div class="page no-toolbar"  data-page="Q011">
+		<!-- Tabs, tabs容器, page-content为tabs -->
+		<div class="page-content">
+		<form action="" id="q011form">
+			 <div class="list-block">
+        <ul>
+          <li>
+            <div class="item-content">
+              <div class="item-media"><i class="icon icon-form-s001"></i></div>
+              <div class="item-inner"> 
+                <div class="item-title item-title02 label">姓名</div>
+                <div class="item-input">
+                  <input type="text" placeholder=""  value="{{A0101}}" readonly="readonly">
+                </div>
+              </div>
+            </div>
+          </li>
+           <li>
+            <div class="item-content">
+              <div class="item-media"><i class="icon icon-form-r007"></i></div>
+              <div class="item-inner"> 
+                <div class="item-title item-title02 label">性别</div>
+                <div class="item-input">
+                  <input type="text" placeholder="" value="{{A0104}}"  readonly="readonly">
+                </div>
+              </div>
+            </div>
+          </li>
+           <li>
+            <div class="item-content">
+              <div class="item-media"><i class="icon icon-form-r008"></i></div>
+              <div class="item-inner"> 
+                <div class="item-title item-title02 label">身份证号</div>
+                <div class="item-input">
+                  <input type="text" placeholder="" value="{{A0184}}" readonly="readonly">
+                </div>
+              </div>
+            </div>
+          </li>
+           <li>
+            <div class="item-content">
+              <div class="item-media"><i class="icon icon-form-calendar"></i></div>
+              <div class="item-inner"> 
+                <div class="item-title item-title02 label">出生日期</div>
+                <div class="item-input">
+                  <input type="text" placeholder="" value="{{A0107}}" readonly="readonly">
+                </div>
+              </div>
+            </div>
+          </li>
+           <li>
+            <div class="item-content">
+              <div class="item-media"><i class="icon  icon-form-number"></i></div>
+              <div class="item-inner"> 
+                <div class="item-title item-title02 label">民族</div>
+                <div class="item-input">
+                  <input type="text" placeholder="" value="{{A0117}}" readonly="readonly">
+                </div>
+              </div>
+            </div>
+          </li>
+           <li>
+            <div class="item-content">
+              <div class="item-media"><i class="icon icon-form-k003"></i></div>
+              <div class="item-inner"> 
+                <div class="item-title item-title02 label">籍贯</div>
+                <div class="item-input">
+                  <input type="text" placeholder="" value="{{A0111}}" readonly="readonly">
+                </div>
+              </div>
+            </div>
+          </li>
+           <li>
+            <div class="item-content">
+              <div class="item-media"><i class="icon icon-form-xueli"></i></div>
+              <div class="item-inner"> 
+                <div class="item-title item-title02 label">学历</div>
+                <div class="item-input">
+                  <input type="text" placeholder="" value="{{A0801}}" readonly="readonly">
+                </div>
+              </div>
+            </div>
+          </li>
+           <li>
+            <div class="item-content">
+              <div class="item-media"><i class="icon icon-form-xuewei"></i></div>
+              <div class="item-inner"> 
+                <div class="item-title item-title02 label">学位</div>
+                <div class="item-input">
+                  <input type="text" placeholder="" value="{{A0901}}" readonly="readonly">
+                </div>
+              </div>
+            </div>
+          </li>
+           <li>
+            <div class="item-content">
+              <div class="item-media"><i class="icon icon-form-r009"></i></div>
+              <div class="item-inner"> 
+                <div class="item-title item-title02 label">婚姻状况</div>
+                <div class="item-input">
+                  <input type="text" placeholder="" value="{{A0131}}" readonly="readonly">
+                </div>
+              </div>
+            </div>
+          </li>
+        
+		  </ul>
+		  </div>
+		  <div class="list-block">
+		  <ul>
+            <li>
+            <div class="item-content">
+              <div class="item-media"><i class="icon icon-form-code"></i></div>
+              <div class="item-inner"> 
+                <div class="item-title item-title02 label">现状描述</div>
+                <div class="item-input">
+                  <input type="text" placeholder="现状描述" maxlength="200" id="current" name="current" >
+                </div>
+              </div>
+            </div>
+          </li>   <li>
+            <div class="item-content">
+              <div class="item-media"><i class="icon icon-form-tel"></i></div>
+              <div class="item-inner"> 
+                <div class="item-title item-title02 label">联系方式</div>
+                <div class="item-input">
+                  <input type="text" placeholder="联系方式" maxlength="11" id="mobile" name="mobile" >
+                </div>
+              </div>
+            </div>
+          </li>   <li>
+            <div class="item-content">
+              <div class="item-media"><i class="icon icon-form-k002"></i></div>
+              <div class="item-inner"> 
+                <div class="item-title item-title02 label">联系地址</div>
+                <div class="item-input">
+                  <input type="text" placeholder="联系地址" maxlength="100" id="address" name="address" >
+                </div>
+              </div>
+            </div>
+          </li>   <li>
+            <div class="item-content">
+              <div class="item-media"><i class="icon icon-form-ze"></i></div>
+              <div class="item-inner"> 
+                <div class="item-title item-title02 label">择偶要求</div>
+                <div class="item-input">
+                  <input type="text" placeholder="择偶要求" maxlength="100" id="ask" name="ask" >
+                </div>
+              </div>
+            </div>
+          </li>   <li>
+            <div class="item-content">
+              <div class="item-media"><i class="icon icon-form-comment"></i></div>
+              <div class="item-inner"> 
+                <div class="item-title item-title02 label">自我推荐</div>
+                <div class="item-input">
+                  <input type="text" placeholder="自我推荐" id="sellYourself" maxlength="100" name="sellYourself"  >
+                </div>
+              </div>
+            </div>
+          </li>
+          
+		   <li class="align-top">
+            <div class="item-content">
+              <div class="item-media"><i class="icon icon-form-text"></i></div>
+              <div class="item-inner"> 
+                <div class="item-title item-title02 label">备注</div>
+                <div class="item-input">
+                  <textarea id="info" name="info" maxlength="200"></textarea>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="content-block">
+				<a href="#" class="button button-round active" onclick="saveQ011()">保存</a>
+	  </div>
+	  </form>
+		</div>
+	  </div>
+	  </div>

@@ -1,0 +1,145 @@
+
+        <div class="navbar">
+		  <div class="navbar-inner">
+			<div class="left sliding"><a href="#" class="back link"><i class="icon icon-back"></i></a></div>
+			<div class="center">
+			  <div class="buttons-row">
+				<a href="#tab1" class="tab-link button02 active button" id="r012Tab1">指标查询</a>
+				<a href="#tab2" class="tab-link button button02" id="r012Tab2">综合查询</a>
+			  </div>
+			</div>
+			<div class="right sliding"></div>
+		  </div>
+		</div>
+		<!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+ <div class="pages">
+	  <div class="page no-toolbar"  data-page="R012">
+		<!-- Tabs, tabs容器, page-content为tabs -->
+		<div class="page-content tabs infinite-scroll  pull-to-refresh-content"   id="r01201page"  data-distance="10"   data-ptr-distance="55">
+					<div class="pull-to-refresh-layer">
+				    	<div class="preloader"></div>
+				      <div class="pull-to-refresh-arrow"></div>
+				    </div>
+		  <!-- Tab 1，党员发展指标查询 -->
+		  <div id="tab1" class="tab active " >
+				<div class="page-content"  style="padding-top:0px">
+			  <div data-page="searchbar">
+				<form class="searchbar searchbar02 searchbar-init" id="r01201form">
+				  <div class="searchbar-input">
+					<input type="search" id="r01201SearchField" name="r01201SearchField" placeholder="组织机构编号/年度/组织机构名称" maxlength="20"/><a href="#" class="searchbar-clear"></a>
+				  </div><a href="#" class="searchbar-cancel">取消</a>
+				  <input type="hidden" name="r01201PageNum" value="1" id="r01201PageNum">
+				</form>
+				<div class="searchbar-overlay"></div>
+				 </div>	  
+			
+				  <div class="list-block searchbar-not-found">
+					<ul>
+					  <li class="item-content">
+						<div class="item-inner">
+						  <div class="item-title">找不到要查询的内容</div>
+						</div>
+					  </li>
+					</ul>
+				  </div>
+				  <div class="list-block list-block02 search-here searchbar-found">
+					<ul id="r012List">
+					{{#each r012List}}
+					  <li class="item-content item-content-r012">
+						  <div class="list-block list-block02 media-list">
+							<ul>
+							  <li><a href="#" class="item-link item-content r012-content">
+								  <div class="item-media"></div>
+								  <div class="item-inner item-inner02">
+									<div class="item-title-row item-title-rownone item-title-row02">
+									  <div class="item-title"> {{organization}}</div>
+									  <div class="item-after">{{id}}</div>
+									</div>
+									<div class="item-title-row item-title-rownone item-title-row02">
+									  <div class="item-subtitle">数量：{{count}}</div>
+									  <div class="item-after item-after-time">{{year}}</div>
+									</div>
+								  </div></a></li>
+									<div class="accordion-item">
+								        <div class="accordion-item-toggle item-text">备注(点击查看)</div>
+								        <div class="accordion-item-content" >{{addition}}</div>
+								    </div>
+							</ul>
+						  </div>
+					  </li>
+				 {{/each}} 
+					</ul>
+				  </div>
+				</div>
+		  </div>
+		  <!-- Tab 1，党员综合指标查询 -->
+		  <div id="tab2" class="tab  ">
+				<div class="page-content"  style="padding-top:0px">
+ 				<div data-page="searchbar">
+				<form class="searchbar searchbar02 searchbar-init" id="r01202form">
+				  <div class="searchbar-input">
+					<input type="search" id="r01202SearchField" name="r01202SearchField" placeholder="组织机构编号/组织机构名称" maxlength="20"/><a href="#" class="searchbar-clear"></a>
+				  </div><a href="#" class="searchbar-cancel">取消</a>
+				  <input type="hidden" name="r01202PageNum" value="1" id="r01202PageNum">
+				</form>
+				<div class="searchbar-overlay"></div>
+				</div>	
+				
+				  <div class="list-block searchbar-not-found">
+					<ul>
+					  <li class="item-content">
+						<div class="item-inner">
+						  <div class="item-title">找不到要查询的内容</div>
+						</div>
+					  </li>
+					</ul>
+				  </div>
+				  <div class="list-block list-block02 search-here searchbar-found">
+					<ul id="r013List">
+					{{#each r013List}}
+					  <li class="item-content item-content-r012">
+						  <div class="list-block list-block02 media-list">
+							<ul>
+							  <li><a href="#" class="item-link item-content r012-content">
+								  <div class="item-media"><img src="img/r012-head.svg"/></div>
+								  <div class="item-inner item-inner02">
+									<div class="item-title-row item-title-rownone item-title-row02">
+									  <div class="item-title">{{organization}}</div>
+									  <div class="item-after">{{id}}</div>
+									</div>
+									<div class="item-title-row item-title-rownone item-title-row02">
+										<div class="row no-gutter">
+											<div class="col-50">年度指标:{{yearCount}}</div>
+											<div class="col-50">提报指标:{{submitCount}}</div>
+										 </div>
+									  <div class="item-after item-after-time">组织编码:{{orgId}}</div>
+									</div>
+									<div class="item-title-row item-title-rownone item-title-row02">	
+									  <div class="row no-gutter">
+											<div class="col-33">审核指标:{{checkCount}}</div>
+											<div class="col-33">完成比例:{{rate}}%</div>
+											<div class="col-33"></div>
+										 </div>									  
+									</div>
+								  </div></a></li>
+								  	<div class="item-text">{{info}}</div>
+								  	<div class="accordion-item">
+										<div class="accordion-item-toggle item-text">备注(点击查看)</div>
+								      <div class="accordion-item-content" >{{info}}</div>
+							</ul>
+						  </div>
+					  </li>
+					  {{/each}} 
+					</ul>
+				  </div>
+				</div>
+
+		  
+		  </div>
+		  
+		</div>
+	  </div>
+	</div>
+        
+
+	 

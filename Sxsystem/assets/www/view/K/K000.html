@@ -1,0 +1,111 @@
+
+        <div class="navbar">
+		  <div class="navbar-inner">
+			<div class="center sliding">通知公告</div>			
+		  </div>
+		</div>
+		<!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+ <div class="pages">
+	  <div class="page " data-page="K000">	    	
+		<div class="page-content tabs infinite-scroll  pull-to-refresh-content" id="k0001Page"  data-distance="10"   data-ptr-distance="55">
+					<div class="pull-to-refresh-layer">
+				    	<div class="preloader"></div>
+				      <div class="pull-to-refresh-arrow"></div>
+				    </div>
+		 <div class="content-block02">
+			<div class="buttons-row buttons-row-k0">
+			{{#if active}}
+			  <a href="#tab1" class="tab-link active button" id="noTab">未读</a>
+			  <a href="#tab2" class="tab-link button" id="overTab">已读</a>
+			  {{else}}
+			  <a href="#tab1" class="tab-link  button" id="noTab">未读</a>
+			  <a href="#tab2" class="tab-link active button" id="overTab">已读</a>
+			  {{/if}}  
+			</div>
+		  </div>
+		   <!-- Tabs, 标签内容区容器 -->
+		  <div class="tabs">
+		  <input type="hidden" name="isRead" id="isRead" value="1"/>
+			<!-- Tab 1, 默认激活 -->
+			<div id="tab1" class="tab active">
+				  <input type="hidden" name="k0001PageNum" value="1" id="k0001PageNum">
+			  <div class="content-block content-block02">
+				<div class="list-block list-block02">
+					<ul>					 
+					  <li class="item-content item-content-r012">
+						  <div class="list-block list-block02 media-list">
+							<ul id="k0001List">
+							{{#each this.noticeList}}
+							  <li><a href="#" onclick="toNoticeDetail({{id}},{{typeId}})" class="item-link item-content r012-content">
+								  <div class="item-media item-media-k0">
+								  {{#js_compare "this.typeId === 1"}}
+										<img src="img/message3.svg" width="70" />
+									{{/js_compare}}  
+									{{#js_compare "this.typeId === 2"}}
+									<img src="img/message2.svg" width="70" />
+									{{/js_compare}}  
+									{{#js_compare "this.typeId === 3"}}
+									<img src="img/message.svg" width="70" />
+									{{/js_compare}}  
+									{{#js_compare "this.typeId === 4"}}
+									<img src="img/message1.svg" width="70" />
+									{{/js_compare}} 
+									{{#js_compare "this.typeId === 5"}}
+									<img src="img/message4.svg" width="70" />
+									{{/js_compare}}  
+									{{#js_compare "this.typeId === 6"}}
+									<img src="img/message6.svg" width="70" />
+									{{/js_compare}}  
+									{{#js_compare "this.typeId === 7"}}
+									<img src="img/message5.svg" width="70" />
+									{{/js_compare}} 
+								  
+								  </div>
+								  <div class="item-inner">
+									<div class="item-title-row">
+									  <div class="item-title">{{title}}</div>
+									  <div class="item-after">{{typeName}}</div>
+									</div>
+									<div class="item-text item-text02">{{date}}
+									</div>
+								  </div></a></li>	
+								  {{/each}}								  
+							</ul>
+						  </div>
+					  </li>
+					</ul>
+				  </div>
+			  </div>
+			</div>
+			<!-- Tab 2 -->
+			<div id="tab2" class="tab">
+			<input type="hidden" name="k0002PageNum" value="1" id="k0002PageNum">
+			  <div class="content-block content-block02">
+				<div class="list-block list-block02">
+					<ul>					 
+					  <li class="item-content item-content-r012">
+						  <div class="list-block list-block02 media-list">
+							<ul id="k0002List">
+							{{#each noticeList}}
+							  <li><a href="#" onclick="toNoticeDetail({{id}},{{typeId}})" class="item-link item-content r012-content">
+								  <div class="item-media item-media-k0"><img src="img/message.svg"/></div>
+								  <div class="item-inner">
+									<div class="item-title-row">
+									  <div class="item-title">{{title}}</div>
+									  <div class="item-after">{{typeName}}</div>
+									</div>
+									<div class="item-text item-text02">{{date}}
+									</div>
+								  </div></a></li>	
+								  {{/each}}									  
+							</ul>
+						  </div>
+					  </li>
+					</ul>
+				  </div>
+			  </div>
+			</div>
+			</div>
+  </div>
+		</div>
+	  </div>

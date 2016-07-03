@@ -1,0 +1,74 @@
+
+       <!-- Top Navbar-->
+        <div class="navbar">
+		  <div class="navbar-inner">
+			<div class="left sliding"><a href="#" class="back link"><i class="icon icon-back"></i></a></div>
+			<div class="center">
+			  <div class="buttons-row">
+				<a href="#" class="tab-link button02 active button" id="tanHref1">统计分析</a>
+				<a href="#" class="tab-link button button02" id="tanHref2">累计查询</a>
+			  </div>
+			</div>
+			<div class="right sliding"></div>
+		  </div>
+		</div>
+		<!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+ <div class="pages">
+	  <div class="page no-toolbar" data-page="F002">
+		<!-- Tabs, tabs容器, page-content为tabs -->
+		<div class="tabs page-content " id="f002page" data-distance="10"   data-ptr-distance="55">
+		<div class="pull-to-refresh-layer">
+	      <div class="preloader"></div>
+	      <div class="pull-to-refresh-arrow"></div>
+    	</div>
+		  <!-- Tab 1 统计分析-->
+		   <div id="tab1" class="tab  active">
+		   <div class="">
+			   <div class="content-block">
+				  <p><a href="#" class="button">考核总分：{{maxPoint}}分</a></p>
+				  <p><a href="#" class="button">累计总分：{{countPoint}}分</a></p>
+				  <!--  <p><a href="#" class="button">累计积分：125分</a></p>-->
+				  <p><a href="#" class="button">完成比例：{{completedRate}}</a></p>
+			  </div>
+			  </div>
+		   </div>
+		  <!-- Tab 2 累计查询-->
+		  <div id="tab2" class="tab ">
+				<div class="">
+ <div data-page="searchbar">
+				<form class="searchbar searchbar-init" id="f002SearchForm">
+				  <div class="searchbar-input">
+					<input type="search" placeholder="积分来源" id="f002SearchField" maxlength="20"/><a href="#" class="searchbar-clear"></a>
+				  </div><a href="#" class="searchbar-cancel">取消</a>
+				   <input type="hidden" name="f002PageNum" value="1" id="f002PageNum">
+				</form>
+				<div class="searchbar-overlay"></div>
+							  </div>	
+				
+				  <div class="list-block searchbar-not-found">
+					<ul>
+					  <li class="item-content">
+						<div class="item-inner">
+						  <div class="item-title">找不到要查询的内容</div>
+						</div>
+					  </li>
+					</ul>
+				  </div>
+				  <div class="list-block list-block02 search-here searchbar-found">
+					<ul>
+					  <li class="item-content item-content-r012">
+						  <div class="list-block list-block02 media-list">
+							<ul id="f002ul">
+								  	
+							</ul>
+						  </div>
+					  </li>
+					</ul>
+				  </div>
+				</div>
+
+		  
+		  </div>
+		</div>
+	  </div>
+	</div>

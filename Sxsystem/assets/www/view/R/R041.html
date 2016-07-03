@@ -1,0 +1,209 @@
+
+<div class="navbar">
+	<div class="navbar-inner">
+		<div class="left sliding">
+			<a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a>
+		</div>
+		<div class="center">
+			<div class="buttons-row">
+				<a href="#" class="tab-link button02 active button" id="tanHref1">转
+					接</a> <a href="#" class="tab-link button button02" id="tanHref2">介绍信</a>
+				<a href="#" class="tab-link button button02" id="tanHref3">证明信</a>
+			</div>
+		</div>
+		<div class="right sliding"></div>
+	</div>
+</div>
+<div class="pages">
+	<div class="page no-toolbar" data-page="R041">
+		<!-- Tabs, tabs容器, page-content为tabs -->
+		<div class="page-content tabs infinite-scroll pull-to-refresh-content"
+			id="r041page" data-distance="10" data-ptr-distance="55">
+			<div class="pull-to-refresh-layer">
+				<div class="preloader"></div>
+				<div class="pull-to-refresh-arrow"></div>
+			</div>
+			<!-- Tab 1，组织信息 -->
+			<div id="tab1" class="tab active">
+				<div class="" style="padding-top: 0px">
+						<div class="row">
+							<div class="col-50">
+								<div class="list-block" style="margin-top: 0px;margin-bottom: 5px;">
+									<a href="#" class="item-link smart-select"
+										data-back-on-select="true"> <select name="toOrgId"
+										id="toOrgId" onchange="toR04101('3')">
+											<option value="">接收单位</option>
+									</select>
+										<div class="item-content">
+											<div class="item-inner">
+												<!-- Select label -->
+												<div class="item-title"><i class="icon icon-form-r012"></i></div>
+											</div>
+										</div>
+									</a>
+								</div>
+							</div>
+							<div class="col-50">
+								<div class="list-block" style="margin-top: 0px;margin-bottom: 5px;">
+									<a href="#" class="item-link smart-select"
+										data-back-on-select="true"> <select name="changeTypeId"
+										id="changeTypeId" onchange="toR04101('3')">
+											<option value="">转移方式</option>
+									</select>
+										<div class="item-content">
+											<div class="item-inner">
+												<!-- Select label -->
+												<div class="item-title"><i class="icon icon-form-r011"></i></div>
+											</div>
+										</div>
+									</a>
+								</div>
+							</div>
+							<input type="hidden" name="r04101PageNum" value="1" id="r04101PageNum">
+						</div>
+
+					<div class="list-block searchbar-not-found">
+						<ul>
+							<li class="item-content">
+								<div class="item-inner">
+									<div class="item-title">找不到要查询的内容</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="list-block list-block02 search-here searchbar-found">
+						<ul id="r04101ul">
+							{{#each this}}
+							<li class="item-content item-content-r012 item-content-r041">
+								<div class="list-block list-block02 media-list">
+									<ul>
+										<li><a href="#"
+											class="item-link item-content r012-content"
+											onclick="toR042('{{prcId}}')">
+												<div class="item-media">
+													<img src="{{imgUrl}}" />
+												</div>
+												<div class="item-inner item-inner02">
+													<div class="item-title-row">
+														<div class="item-title">
+															{{a0101}} <label style="margin-left: 10px;">{{a0104}}</label>
+														</div>
+														<div class="item-after">{{state}}</div>
+													</div>
+													<div class="item-title-row item-title-rownone">
+														<div class="item-title">{{pmType}}</div>
+													</div>
+													<div
+														class="item-title-row item-title-rownone item-title-row02">
+														<div class="item-subtitle item-subtitle-r041">身份证号：{{a0184}}</div>
+													</div>
+													<div
+														class="item-title-row item-title-rownone item-title-row02">
+														<div class="item-subtitle item-subtitle-r041">所属单位：{{fromOrgName}}</div>
+													</div>
+												</div>
+										</a></li>
+										<div class="item-text item-text-r041">
+											<div class="ks-grid ks-grid-r041">
+												<div class="row no-gutter">
+													<div class="col-25">
+														<div class="r041-top r041-top-title">转移方式</div>
+														<div class="r041-bottom">{{changeType}}</div>
+													</div>
+													<div class="col-50">
+														<div class="r041-top r041-top-title">接收单位</div>
+														<div class="r041-bottom">{{toOrgName}}</div>
+													</div>
+													<div class="col-25">
+														<div class="r041-top r041-top-title">转移时间</div>
+														<div class="r041-bottom">{{changeDate}}</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</ul>
+								</div>
+							</li> {{/each}}
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div id="tab2" class="tab">
+				<div class="">
+					<div data-page="searchbar">
+						<form class="searchbar searchbar-init" id="r04102SearchForm">
+							<div class="searchbar-input">
+								<input type="search" placeholder="介绍信标题" id="r04102SearchField"
+									maxlength="10" /><a href="#" class="searchbar-clear"></a>
+							</div>
+							<a href="#" class="searchbar-cancel">取消</a> <input type="hidden"
+								name="r04102PageNum" value="1" id="r04102PageNum">
+						</form>
+						<div class="searchbar-overlay"></div>
+					</div>
+
+					<div class="list-block searchbar-not-found">
+						<ul>
+							<li class="item-content">
+								<div class="item-inner">
+									<div class="item-title">找不到要查询的内容</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="list-block list-block02 search-here searchbar-found">
+						<ul>
+							<li class="item-content item-content-r012">
+								<div class="list-block list-block02 media-list">
+									<ul id="r04102ul">
+									</ul>
+								</div>
+							</li>
+
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<!-- Tab 3，证明信信息 -->
+			<div id="tab3" class="tab">
+				<div class="">
+					<div data-page="searchbar">
+						<form data-search-list=".search-here" data-search-in=".item-title"
+							class="searchbar searchbar-init" id="r04103SearchForm">
+							<div class="searchbar-input">
+								<input type="search" placeholder="证明信标题" id="r04103SearchField"
+									maxlength="10" /><a href="#" class="searchbar-clear"></a>
+							</div>
+							<a href="#" class="searchbar-cancel">取消</a> <input type="hidden"
+								name="r04103PageNum" value="1" id="r04103PageNum">
+						</form>
+						<div class="searchbar-overlay"></div>
+					</div>
+
+					<div class="list-block searchbar-not-found">
+						<ul>
+							<li class="item-content">
+								<div class="item-inner">
+									<div class="item-title">找不到要查询的内容</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="list-block list-block02 search-here searchbar-found">
+						<ul>
+							<li class="item-content item-content-r012">
+								<div class="list-block list-block02 media-list">
+									<ul id="r04103ul">
+									</ul>
+								</div>
+							</li>
+
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+

@@ -1,0 +1,74 @@
+<div class="navbar">
+	<div class="navbar-inner">
+		<div class="center sliding">个人中心</div>
+	</div>
+</div>
+<div data-page="G000" class="page">
+	<div class="page-content"> 
+					<div class="list-block">
+						<ul>
+						  <li class="item-content item-content-r041">
+						  <div class="list-block list-block02 media-list">
+							<ul>
+							  <li>								  
+								  <div class="item-inner item-inner02 item-inner-head" id="photoChange">
+								   <img src="{{userUrl}}" id="userHead">
+								  </div>
+							  </li>
+							<div class="item-text item-text-r041 item-text-g">
+									<div class="ks-grid ks-grid-r041" id=userInfo>
+									<div class="row no-gutter" id="userInfo">
+									  <div class="col-33">
+										<div class="r041-bottom" id="username">{{username}}</div>
+									  </div>
+									  <div class="col-33">
+										<div class="r041-bottom" id="age">{{age}}岁</div></div>
+									  <div class="col-33">
+										<div class="r041-bottom" id="mobile">{{mobile}}</div></div>
+									</div>
+									</div>
+							</div>
+							</ul>
+						  </div>
+					  </li>
+						</ul>
+					</div>
+					 <div class="list-block list-block02">
+					<ul>
+					  <li class="item-content item-content-r012">
+						  <div class="list-block list-block02 media-list">
+							<ul>
+							  <li><a href="#" onclick="toG002()" class="item-link item-content">
+								  <div class="item-media"><i class="icon icon-form-qr"></i></div>
+								  <div class="item-inner">
+									<div class="item-title-row">
+									  <div class="item-title item-title-g">我的二维码</div>
+									</div>
+								  </div></a></li>
+								  <li><a href="#" onclick="CommonFunc.toHtml('view/G/G001.html')" class="item-link item-content">
+								  <div class="item-media"><i class="icon icon-form-qr01"></i></div>
+								  <div class="item-inner">
+									<div class="item-title-row">
+									  <div class="item-title item-title-g">修改密码</div>
+									</div>
+								  </div></a></li>
+								  <li><a href="#" onclick="toG003()" class="item-link item-content">
+								  <div class="item-media"><i class="icon icon-form-qr02"></i></div>
+								  <div class="item-inner">
+									<div class="item-title-row">
+									  <div class="item-title item-title-g">关于</div>
+									</div>
+								  </div></a></li>
+								 
+							</ul>
+						  </div>
+			
+					  </li>
+
+					</ul>
+				  </div>
+			  <div class="content-block">
+				<a href="#" class="button button-round active" onclick="CommonUtil.logout()">退出</a>
+	  </div>
+				</div>
+</div>

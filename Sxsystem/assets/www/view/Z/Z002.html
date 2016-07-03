@@ -1,0 +1,186 @@
+
+        <div class="navbar">
+		  <div class="navbar-inner">
+			<div class="left sliding"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>
+			<div class="center">
+			  <div class="buttons-row">
+				<a href="#" class="tab-link button02 active button" id="tanHref1">组织信息</a>
+				<a href="#" class="tab-link button button02"  id="tanHref2">信息维护</a>
+			  </div>
+			</div>
+			<div class="right sliding"></div>
+		  </div>
+		</div>
+		<!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+ <div class="pages">
+	  <div class="page no-toolbar"  data-page="Z002">
+		<!-- Tabs, tabs容器, page-content为tabs -->
+		<div class="page-content tabs">
+		  <!-- Tab 1，组织信息 -->
+		  <div id="tab1" class="tab tab02 active">
+			  <div class="content-block">
+				  <p><a href="#" class="button">已建立的基层组织{{jicengCount}}个</a></p>
+				  <p><a href="#" class="button">党委{{dangweiCount}}个</a></p>
+				  <p><a href="#" class="button">党总支{{dangzhibuCount}}个</a></p>
+				  <p><a href="#" class="button">党总支{{dangzongzhibuCount}}个</a></p>
+				  <p><a href="#" class="button">党小组{{dangxiaozuCount}}个</a></p>
+			  </div>
+				<div class="img-width" id="container">
+			  </div>
+		  </div>
+		  <!-- Tab 2 信息维护-->
+		  <div id="tab2" class="tab ">
+		 <form action="" id="Z002Form">
+			 <div class="list-block">
+        <ul>
+          <li>
+            <div class="item-content">
+              <div class="item-media"><i class="icon icon-form-number"></i></div>
+              <div class="item-inner"> 
+                <div class="item-title item-title02 label">党组织编号</div>
+                <div class="item-input">
+                  <input type="text" placeholder="GB001" value="{{D0108}}"  readonly="readonly">
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="item-content">
+              <div class="item-media"><i class="icon icon-form-dname"></i></div>
+              <div class="item-inner"> 
+                <div class="item-title item-title02 label">组织名称</div>
+                <div class="item-input">
+                  <input type="text" placeholder="中共中央" class=""  value="{{D0101}}"   readonly="readonly">
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="item-content">
+              <div class="item-media"><i class="icon icon-form-attribute"></i></div>
+              <div class="item-inner"> 
+                <div class="item-title item-title02 label">组织属性</div>
+                <div class="item-input">
+                  <input type="text" placeholder="组织属性"  value="{{D0121}}"   readonly="readonly">
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="item-content">
+              <div class="item-media"><i class="icon icon-form-relationship"></i></div>
+              <div class="item-inner"> 
+                <div class="item-title item-title02 label">党组织<br/>属地关系</div>
+                <div class="item-input">
+                  <input type="text" placeholder="属地关系"  value="{{D0175}}"   readonly="readonly">
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="item-content">
+              <div class="item-media"><i class="icon icon-form-fullname"></i></div>
+              <div class="item-inner"> 
+                <div class="item-title item-title02 label">组织全称</div>
+                <div class="item-input">
+                  <input type="text" placeholder="全称"  value="{{D0104}}"   readonly="readonly">
+                </div>
+              </div>
+            </div>
+          </li>
+		  </ul>
+		  </div>
+		  <div class="list-block">
+		  <ul>
+          
+          <li>
+            <div class="item-content">
+              <div class="item-media"><i class="icon icon-form-comment"></i></div>
+              <div class="item-inner"> 
+                <div class="item-title item-title02 label">通讯地址</div>
+                <div class="item-input">
+                  <input type="text" placeholder="组织属性"  value="{{D0191}}" name="D0191" maxlength="200">
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="item-content">
+              <div class="item-media"><i class="icon icon-form-calendar"></i></div>
+              <div class="item-inner"> 
+                <div class="item-title item-title02 label">建立时间</div>
+                <div class="item-input">
+                  <input type="date" placeholder="建立时间"  id="D0144"   value="{{D0144}}" name="D0144"  >
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="item-content">
+              <div class="item-media"><i class="icon icon-form-symbol"></i></div>
+              <div class="item-inner"> 
+                <div class="item-title item-title02 label">建立文号</div>
+                <div class="item-input">
+                  <input type="text" placeholder="文号"  value="{{D0147}}" name="D0147"  maxlength="32">
+                </div>
+              </div>
+            </div>
+          </li>
+		  </ul>
+		  </div>
+		  <div class="list-block">
+		  <ul>
+          <li>
+            <div class="item-content">
+              <div class="item-media"><i class="icon icon-form-tel"></i></div>
+              <div class="item-inner"> 
+                <div class="item-title item-title02 label">联系电话</div>
+                <div class="item-input">
+                  <input type="tel" placeholder="请输入电话"  value="{{D0193}}" name="D0193"  maxlength="12">
+                </div>
+              </div>
+            </div>
+          </li>
+		  <li class="align-top">
+            <div class="item-content">
+              <div class="item-media"><i class="icon icon-form-fax"></i></div>
+              <div class="item-inner"> 
+                <div class="item-title item-title02 label">传真号码</div>
+                <div class="item-input">
+                  <input type="tel" placeholder="传真"  value="{{D0194}}" name="D0194"  maxlength="30">
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="align-top">
+            <div class="item-content">
+              <div class="item-media"><i class="icon icon-form-code"></i></div>
+              <div class="item-inner"> 
+                <div class="item-title label">邮政编码</div>
+                <div class="item-input">
+                  <input type="tel" placeholder="邮编"  value="{{D0192}}" name="D0192"  maxlength="6">
+                </div>
+              </div>
+            </div>
+          </li>
+		   <li class="align-top">
+            <div class="item-content">
+              <div class="item-media"><i class="icon icon-form-text"></i></div>
+              <div class="item-inner"> 
+                <div class="item-title item-title02 label"  >建立原因</div>
+                <div class="item-input">
+                  <textarea  name="D0151" maxlength="500">{{D0151}}</textarea>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      </form>
+	  <div class="content-block">
+				<a href="#" class="button button-round active" onclick="saveZ002()">保存</a>
+	  </div>	
+		  </div>
+		</div>
+	  </div>
+	 </div>

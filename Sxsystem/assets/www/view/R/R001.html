@@ -1,0 +1,67 @@
+
+       <!-- Top Navbar-->
+        <div class="navbar">
+		  <div class="navbar-inner">
+			<div class="left sliding"><a href="#" class="back link"><i class="icon icon-back"></i></a></div>
+			<div class="center sliding">换届选举</div>
+	     </div>
+		</div>
+	<div class="pages">
+	  <div class="page no-toolbar"  data-page="R001">
+				<div class="page-content infinite-scroll  pull-to-refresh-content" id="r001Page" data-distance="10"   data-ptr-distance="55">
+				<div class="pull-to-refresh-layer">
+    	<div class="preloader"></div>
+      <div class="pull-to-refresh-arrow"></div>
+    </div>
+			  <div data-page="searchbar">
+				<form class="searchbar searchbar02 searchbar-init" id="r001form">
+				  <div class="searchbar-input">
+					<input type="search" id="r001searchField" placeholder="党员编号/党员姓名" maxlength="20"/><a href="#" class="searchbar-clear"></a>
+				  </div><a href="#" class="searchbar-cancel">取消</a>
+				  <input type="hidden" name="r001PageNum" value="1" id="r001PageNum">
+				</form>
+				<div class="searchbar-overlay"></div>
+				 </div>	  			
+				  <div class="list-block searchbar-not-found">
+					<ul>
+					  <li class="item-content">
+						<div class="item-inner">
+						  <div class="item-title">找不到要查询的内容</div>
+						</div>
+					  </li>
+					</ul>
+				  </div>
+				  <div class="list-block list-block02 search-here searchbar-found">
+						  <div class="list-group">
+						
+						 
+					<ul> 
+					  <li class="item-content item-content-r012">
+						  <div class="list-block list-block02 media-list" id="r001Page">
+							<ul id="partyList">
+							{{#each partyList}}
+							  <li><a href="#"  onclick="toR002({{partyID}})" class="item-link item-content r012-content">
+								  <div class="item-media item-media-k0"><img src="img/18.png"/></div>
+								  <div class="item-inner item-inner-r001">
+									<div class="item-title-row">
+									  <div class="item-title">{{position}}</div>
+									</div>
+									<div class="item-text item-text02">{{username}}
+									</div>
+								  </div></a></li>
+								 {{/each}} 
+								 
+							</ul>
+						  </div>
+					  </li>	</ul>
+</div>
+				
+				  </div>
+
+
+  </div>
+  </div>
+
+  </div>      
+
+

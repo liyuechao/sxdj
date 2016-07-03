@@ -1,0 +1,110 @@
+    <div class="navbar">
+		  <div class="navbar-inner">
+			<div class="left sliding"><a href="#" class="back link" ><i class="icon icon-back"></i><span>Back</span></a></div>
+			<div class="center sliding">缴费详情</div>
+		  </div>
+		</div>
+		<!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+ <div class="pages">
+	  <div class="page no-toolbar"  data-page="K002">
+		<!-- Tabs, tabs容器, page-content为tabs -->
+		<div class="page-content">
+		
+			 <div class="list-block">
+        <ul>
+          <li>
+            <div class="item-content">
+              <div class="item-media"><i class="icon icon-form-number"></i></div>
+              <div class="item-inner"> 
+                <div class="item-title item-title02 label">流水单编号</div>
+                <div class="item-input">
+                  <input type="text"  readonly="readonly" value="{{payNo}}">
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="item-content">
+              <div class="item-media"><i class="icon icon-form-r010"></i></div>
+              <div class="item-inner"> 
+                <div class="item-title item-title02 label">党组织</div>
+                <div class="item-input">
+                  <input type="text"  class="" readonly="readonly"  value="{{organization}}">
+                </div>
+              </div>
+            </div>
+          </li>
+           <li>
+            <div class="item-content">
+              <div class="item-media"><i class="icon icon-form-calendar"></i></div>
+              <div class="item-inner"> 
+                <div class="item-title item-title02 label">缴纳年份</div>
+                <div class="item-input">
+                  <input type="text"   readonly="readonly"  value="{{year}}">
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="item-content">
+              <div class="item-media"><i class="icon icon-form-r003"></i></div>
+              <div class="item-inner"> 
+                <div class="item-title item-title02 label">转账银行帐号</div>
+                <div class="item-input">
+                  <input type="text" readonly="readonly"  value="{{G0101}}">
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="item-content">
+              <div class="item-media"><i class="icon icon-form-money"></i></div>
+              <div class="item-inner"> 
+                <div class="item-title item-title02 label">本次金额</div>
+                <div class="item-input">
+                  <input type="text"  readonly="readonly"  value="{{account}}">
+                </div>
+              </div>
+            </div>
+          </li>
+           <li>
+            <div class="item-content">
+              <div class="item-media"><i class="icon icon-form-allmoney"></i></div>
+              <div class="item-inner"> 
+                <div class="item-title item-title02 label">累计金额</div>
+                <div class="item-input">
+                  <input type="text"  readonly="readonly" value="{{sumAccount}}">
+                </div>
+              </div>
+            </div>
+          </li>
+           <li>
+            <div class="item-content">
+              <div class="item-media"><i class="icon icon-form-calendar"></i></div>
+              <div class="item-inner"> 
+                <div class="item-title item-title02 label">日期</div>
+                <div class="item-input">
+                  <input type="text" readonly="readonly" value="{{createDate}}">
+                </div>
+              </div>
+            </div>
+          </li>
+		 
+          
+		   <li class="align-top">
+            <div class="item-content">
+              <div class="item-media"><i class="icon icon-form-text"></i></div>
+              <div class="item-inner"> 
+                <div class="item-title item-title02 label">备注</div>
+                <div class="item-input">
+                  <textarea readonly="readonly">{{info}}</textarea>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+	  
+		</div>
+	  </div>
+	  </div>

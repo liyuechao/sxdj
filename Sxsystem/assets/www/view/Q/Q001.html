@@ -1,0 +1,72 @@
+    <div class="navbar">
+		  <div class="navbar-inner">
+			<div class="left sliding"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>
+			<div class="center sliding">志愿注册</div>
+			<div class="right sliding"><a href="#" onclick="CommonFunc.toHtml('view/Q/Q002.html')" class="button">帮助</a></div>	
+		  </div>
+		</div>
+		<!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+ <div class="pages">
+	  <div class="page no-toolbar"  data-page="Q001">
+		<div class="page-content">
+		<form action="" id="q001form">
+			 <div class="list-block">
+        <ul>
+          <li>
+            <div class="item-content">
+              <div class="item-media"><i class="icon icon-form-q001"></i></div>
+              <div class="item-inner"> 
+                <div class="item-title item-k001 label">选择服务类型</div>
+                <div class="item-input">
+                 <div class="item-input">
+				    <select  id="SortCode" name="SortCode" > 
+				    {{#each this}}
+				    <option value="{{SortCode}}">{{TypeName}}</option>
+				    {{/each}} 
+              		</select>
+				  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="item-content">
+              <div class="item-media"><i class="icon icon-form-calendar"></i></div>
+              <div class="item-inner"> 
+                <div class="item-title item-title02 label">服务时间</div>
+                <div class="item-input">
+                  <input type="date" placeholder="服务时间" id="serviceTime" name="serviceTime" class="">
+                </div>
+              </div>
+            </div>
+          </li>
+           <li>
+            <div class="item-content">
+              <div class="item-media"><i class="icon icon-form-tel"></i></div>
+              <div class="item-inner"> 
+                <div class="item-title item-title02 label">联系方式</div>
+                <div class="item-input">
+                  <input type="tel" placeholder="联系方式" maxlength="11" id="phone" name="phone"  class="">
+                </div>
+              </div>
+            </div>
+          </li>
+         <li>
+            <div class="item-content">
+              <div class="item-media"><i class="icon icon-form-comment"></i></div>
+              <div class="item-inner"> 
+                <div class="item-title item-title02 label">联系地址</div>
+                <div class="item-input">
+                  <input type="text" placeholder="联系地址" maxlength="100" id="address" name="address"  class="">
+                </div>
+              </div>
+            </div>
+          </li>
+		</ul> 
+	  <div class="content-block">
+				<a href="#" class="button button-round active" onclick="saveQ001()">保存</a>
+	  </div>	
+		</div>
+		</form>
+	  </div>
+	
